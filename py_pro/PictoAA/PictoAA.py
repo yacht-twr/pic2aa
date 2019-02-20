@@ -23,29 +23,19 @@ image_row = im.size[0]
 image_column = im.size[1]
 image_array = [["" for i in range(image_row)] for j in range(image_column)]
 
-"""
-def rgb_transform_into_gray(rgb):
-    red = rgb[0]
-    green = rgb[1]
-    blue = rgb[2]
-
-    gray = (77*red + 151*green + 28*blue)/256
-    return gray
-"""
-
 def num_transform_into_char(gray):
     divided_8bit = 255/(num_of_chars_in_name + 1)
     for i in range(num_of_chars_in_name):
         if gray > i * divided_8bit and gray <= (i+1) * divided_8bit:
             return name_parts[i]
     return "　"
-
+"""
 def output(aa_array, num_column, num_row):
     for j in range(num_column):
         for i in range(num_row):
             print(aa_array[j][i], end="")
         print("\n")
-
+"""
 
 for j in range(image_column):
     for i in range(image_row):
